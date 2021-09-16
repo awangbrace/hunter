@@ -232,18 +232,6 @@ set(
     toolset=${toolset_full_name}
     "--user-config=${boost_user_jam}"
     #--with-@HUNTER_PACKAGE_COMPONENT@
-    --with-chrono
-    --with-date_time
-    --with-filesystem
-    --with-system
-    --with-random
-    --with-regex
-    --with-test
-    --with-thread
-    --with-serialization
-    --with-program_options
-    --with-log
-    --with-iostreams
     --abbreviate-paths
 )
 
