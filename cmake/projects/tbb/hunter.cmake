@@ -30,18 +30,37 @@ hunter_add_version(
     960bf54151e75dbf590c92a844d251841cdffc12
 )
 
-hunter_cmake_args(
+hunter_add_version(
+    PACKAGE_NAME
     tbb
-    CMAKE_ARGS
-    CMAKE_INSTALL_LIBDIR=lib
-    CMAKE_INSTALL_BINDIR=bin
-    CMAKE_INSTALL_INCLUDEDIR=include
+    VERSION
+    "2021.4.0"
+    URL
+    "https://codeload.github.com/oneapi-src/oneTBB/tar.gz/refs/tags/v2021.4.0"
+    SHA1
+    2641f9a1ead4621a8660ee07a1664627fa0eb477
 )
 
 if(HUNTER_tbb_VERSION VERSION_GREATER_EQUAL 2021.2.0)
     hunter_pick_scheme(DEFAULT url_sha1_cmake)
+    hunter_cmake_args(
+        tbb
+        CMAKE_ARGS
+        CMAKE_INSTALL_LIBDIR=lib
+        CMAKE_INSTALL_BINDIR=bin
+        CMAKE_INSTALL_INCLUDEDIR=include
+        TBB_STRICT=OFF
+        TBB_TEST=OFF
+        )
 else()
     hunter_pick_scheme(DEFAULT url_sha1_tbb)
+    hunter_cmake_args(
+        tbb
+        CMAKE_ARGS
+        CMAKE_INSTALL_LIBDIR=lib
+        CMAKE_INSTALL_BINDIR=bin
+        CMAKE_INSTALL_INCLUDEDIR=include
+    )
 endif()
 
 hunter_cacheable(tbb)
