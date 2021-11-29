@@ -42,8 +42,13 @@ set(configure_command perl ./Configure)
 set(configure_architectures @CMAKE_OSX_ARCHITECTURES@)
 
 if(NOT configure_architectures)
-  hunter_status_debug("Using default macOS architecture: x86_64")
-  set(configure_architectures "x86_64")
+  if("${CMAKE_HOST_SYSTEM_PROCESSOR}" STREQUAL "arm64")
+    hunter_status_debug("Using default macOS architecture: arm64")
+    set(configure_architectures "arm64")
+  else()
+    hunter_status_debug("Using default macOS architecture: x86_64")
+    set(configure_architectures "x86_64")
+  endif()
 endif()
 
 # tassl appends the version number differently by version

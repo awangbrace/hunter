@@ -14,6 +14,17 @@ hunter_add_version(
     PACKAGE_NAME
     OpenSSL
     VERSION
+    tassl_1.1.1b_v1.4-63b60292
+    URL
+    "https://codeload.github.com/jntass/TASSL-1.1.1b/zip/63b602923f924b432774f6b6a2b22c708d5231c8"
+    SHA1
+    d4ffbdc5b29cf437f5f6711cc3d4b35f04b06965
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    OpenSSL
+    VERSION
     tassl_1.1.1b_v1.4
     URL
     "https://codeload.github.com/jntass/TASSL-1.1.1b/zip/fe885b939c13c715633e4c05df8811a1ea7ca079"
