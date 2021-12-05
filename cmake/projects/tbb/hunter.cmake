@@ -34,6 +34,17 @@ hunter_add_version(
     PACKAGE_NAME
     tbb
     VERSION
+    "2021.3.0"
+    URL
+    "https://codeload.github.com/oneapi-src/oneTBB/tar.gz/refs/tags/v2021.3.0"
+    SHA1
+    4335ea0dc87d1ead91998e90e7de3045704c1fda
+)
+
+hunter_add_version(
+    PACKAGE_NAME
+    tbb
+    VERSION
     "2021.4.0"
     URL
     "https://codeload.github.com/oneapi-src/oneTBB/tar.gz/refs/tags/v2021.4.0"
