@@ -12,7 +12,7 @@ hunter_add_version(
     PACKAGE_NAME
     tarscpp
     VERSION
-    "2.4.0-f040b641"
+    "3.0.3-7299ad23"
     URL
     "https://github.com/FISCO-BCOS/TarsCpp/archive/7299ad23830b50ca6284e11bb0374f2670f23cdf.tar.gz"
     SHA1
