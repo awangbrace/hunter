@@ -14,9 +14,9 @@ hunter_add_version(
     VERSION
     "2.4.0-f040b641"
     URL
-    "https://github.com/cyjseagull/TarsCpp/archive/721aeea68abdd0801c3d3b94e70ac299b043448c.tar.gz"
+    "https://github.com/FISCO-BCOS/TarsCpp/archive/7299ad23830b50ca6284e11bb0374f2670f23cdf.tar.gz"
     SHA1
-    da5b8ddf655a28723b3477ae03df779b3579778e
+    9667c0d775bbbc6400a47034bee86003888db978
 )
 hunter_pick_scheme(DEFAULT url_sha1_tarscpp)
 hunter_cacheable(tarscpp)
