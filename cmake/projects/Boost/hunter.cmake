@@ -221,7 +221,9 @@ hunter_add_version(
     VERSION
     "1.76.0"
     URL
-    "${_hunter_boost_base_url}/1.76.0/source/boost_1_76_0.tar.bz2 ${_hunter_sourceforge_boost_base_url}/1.76.0/boost_1_76_0.tar.bz2"
+    "https://osp-1257653870.cos.ap-guangzhou.myqcloud.com/FISCO-BCOS/FISCO-BCOS/deps/boost_1_76_0.tar.bz2
+    https://downloads.sourceforge.net/project/boost/boost/1.76.0/source/boost_1_76_0.tar.bz2
+    https://nchc.dl.sourceforge.net/project/boost/boost/1.76.0/boost_1_76_0.tar.bz2"
     SHA1
     8064156508312dde1d834fec3dca9b11006555b6
 )
