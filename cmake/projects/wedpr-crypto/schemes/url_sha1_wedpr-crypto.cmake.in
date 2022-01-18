@@ -47,9 +47,16 @@ set(WEDRP_CRYPTO_BUILD_COMMAND cargo build --release --features "${WEDPR_CRYP_FE
 set(WEDRP_EXTEND_CRYPTO_PATH "${COMPILE_PATH}/ffi_c_fisco_bcos")
 set(WEDRP_EXTEND_CRYPTO_COMMAND cargo build --release --manifest-path ${WEDRP_EXTEND_CRYPTO_PATH}/Cargo.toml)
 
+set(LIB_PREFIX "lib")
+set(LIB_POSTFIX ".a")
 
-set(WEDPR_CRYPTO_LIB libffi_c_crypto_binary.a)
-set(WEDPR_EXTEND_CRYPTO_LIB libffi_c_fisco_bcos.a)
+if (WIN32)
+set(LIB_PREFIX "")
+set(LIB_POSTFIX ".lib")
+endif()
+
+set(WEDPR_CRYPTO_LIB ${LIB_PREFIX}ffi_c_crypto_binary${LIB_POSTFIX})
+set(WEDPR_EXTEND_CRYPTO_LIB ${LIB_PREFIX}ffi_c_fisco_bcos${LIB_POSTFIX})
 set(WEDPR_INCLUDE_DIR "@HUNTER_PACKAGE_SOURCE_DIR@/third_party/include")
 set(WEDPR_INCLUDE_INSTALL_DST_DIR "@HUNTER_PACKAGE_INSTALL_PREFIX@/include/wedpr-crypto/")
 ExternalProject_Add(
