@@ -13,11 +13,11 @@ hunter_add_version(
     PACKAGE_NAME
     bcos-utilities
     VERSION
-    3.0.0-rc2-f2b632f4
+    1.0.0-rc1-f12788a1
     URL
-    "https://github.com/FISCO-BCOS/bcos-utilities/archive/f2b632f4b5f5dacbc0cd195038c3e62e3675ad71.tar.gz"
+    "https://github.com/FISCO-BCOS/bcos-utilities/archive/f12788a1ce2ad7de0239e2c16538706899cefcf5.tar.gz"
     SHA1
-    0c8dd7be7e9122156267a06c50f2f8895c0d8908
+    1d2c94475148eb9e2e71b1920a3cb19865e3379a
 )
 
 hunter_cmake_args(

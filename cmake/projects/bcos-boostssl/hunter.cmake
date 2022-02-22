@@ -13,11 +13,11 @@ hunter_add_version(
     PACKAGE_NAME
     bcos-boostssl
     VERSION
-    1.0.0-3e516c87
+    1.0.0-rc2-870f24ac
     URL
-    "https://github.com/FISCO-BCOS/bcos-boostssl/archive/3e516c87463101aaddae543ba752b65cebf9500f.tar.gz"
+    "https://github.com/FISCO-BCOS/bcos-boostssl/archive/870f24ace2dffc4b086123f381ba52272ca8c172.tar.gz"
     SHA1
-    71fcc2dd7058bbcb85429bc0a88876ec139b3696
+    1c1ff3a85e156b2532b45ba2f626a2932464d171
 )
 
 hunter_cmake_args(
