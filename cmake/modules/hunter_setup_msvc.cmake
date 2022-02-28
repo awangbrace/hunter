@@ -93,7 +93,6 @@ macro(hunter_setup_msvc)
 
     hunter_status_debug("HUNTER_MSVC_VERSION: ${HUNTER_MSVC_VERSION}")
     hunter_status_debug("HUNTER_MSVC_YEAR: ${HUNTER_MSVC_YEAR}")
-
     string(COMPARE EQUAL "${MSVC_CXX_ARCHITECTURE_ID}" "" _cxx_is_empty)
     string(COMPARE EQUAL "${MSVC_C_ARCHITECTURE_ID}" "" _c_is_empty)
 
@@ -109,6 +108,16 @@ macro(hunter_setup_msvc)
     string(COMPARE EQUAL "${_architecture_id}" "x64" _is_x64)
     string(COMPARE EQUAL "${_architecture_id}" "ARMV7" _is_arm)
     string(COMPARE EQUAL "${_architecture_id}" "ARM64" _is_arm64)
+
+    if (MSVC_CXX_ARCHITECTURE_ID)
+      string(TOLOWER ${MSVC_CXX_ARCHITECTURE_ID} LOWERCASE_CMAKE_SYSTEM_PROCESSOR)
+    else ()
+      string(TOLOWER ${CMAKE_SYSTEM_PROCESSOR} LOWERCASE_CMAKE_SYSTEM_PROCESSOR)
+    endif()
+    # support linux aarch64
+    if (LOWERCASE_CMAKE_SYSTEM_PROCESSOR MATCHES "^aarch64")
+        set(_is_arm64 1)
+    endif ()
 
     if(_is_x86)
       set(HUNTER_MSVC_ARCH_TARGET "x86")

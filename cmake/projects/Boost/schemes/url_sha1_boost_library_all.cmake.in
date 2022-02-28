@@ -399,6 +399,7 @@ elseif("@MSVC@")
   string(COMPARE EQUAL "@HUNTER_MSVC_ARCH_TARGET@" "amd64" is_x64)
   string(COMPARE EQUAL "@HUNTER_MSVC_ARCH_TARGET@" "arm" is_arm)
   string(COMPARE EQUAL "@HUNTER_MSVC_ARCH_TARGET@" "arm64" is_arm64)
+
   if(is_x86 OR is_arm)
     list(APPEND build_opts "address-model=32")
   elseif(is_x64 OR is_arm64)
