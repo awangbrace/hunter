@@ -18,6 +18,17 @@ hunter_add_version(
     SHA1
     9667c0d775bbbc6400a47034bee86003888db978
 )
+
+hunter_add_version(
+    PACKAGE_NAME
+    tarscpp
+    VERSION
+    "3.0.3-3b65a48a"
+    URL
+    "https://github.com/FISCO-BCOS/TarsCpp/archive/3b65a48a76e23ec5dc581a5fcf210575728f5638.tar.gz"
+    SHA1
+    399f8b76a6a87618ca67b053017b6bb10a8218f9
+)
 hunter_pick_scheme(DEFAULT url_sha1_tarscpp)
 hunter_cacheable(tarscpp)
 hunter_download(PACKAGE_NAME tarscpp)
