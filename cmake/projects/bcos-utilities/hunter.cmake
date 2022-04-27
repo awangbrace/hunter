@@ -13,16 +13,14 @@ hunter_add_version(
     PACKAGE_NAME
     bcos-utilities
     VERSION
-    1.0.0-rc1-f12788a1
-    URL
-    "https://github.com/FISCO-BCOS/bcos-utilities/archive/f12788a1ce2ad7de0239e2c16538706899cefcf5.tar.gz"
-    SHA1
-    1d2c94475148eb9e2e71b1920a3cb19865e3379a
+    1.0.0-rc2.2
+    URL https://${URL_BASE}/awangbrace/bcos-utilities/archive/refs/tags/v1.0.0-rc2.2.tar.gz
+    SHA1 0e6e0d3276f2b7c3c49b8e26d754e9bc67a0c9f3
 )
 
 hunter_cmake_args(
     bcos-utilities
-    CMAKE_ARGS
+    CMAKE_ARGS HUNTER_PACKAGE_LOG_BUILD=ON HUNTER_PACKAGE_LOG_INSTALL=ON  URL_BASE=${URL_BASE} ARCH_NATIVE=ON
     CMAKE_INSTALL_LIBDIR=lib
     CMAKE_INSTALL_BINDIR=bin
     CMAKE_INSTALL_INCLUDEDIR=include
